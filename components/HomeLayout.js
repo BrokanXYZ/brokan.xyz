@@ -9,24 +9,35 @@ export default function Layout(props) {
   };
   
   let backgroundStyle = {
-    height: '100vh',
-    width: '100vw',
+    height: '100%',
+    width: '100%',
+    position: 'fixed',
+    top: '0px',
+    left: '0px',
+    zIndex: '1000',
+    overflowY: 'scroll'
   }
 
   let colorOne, colorTwo, colorThree, colorFour;
 
   switch(props.gradientType){
     case '1':
-      colorOne = 'rgba(0, 0, 255, 0.5)';
-      colorTwo = 'rgba(255, 0, 0, 0.5)';
-      colorThree = 'rgba(0, 200, 200, 0.5)';
-      colorFour = 'rgba(200, 200, 0, 0.5)';
+      colorOne = 'rgba(0, 0, 255, 0.6)';
+      colorTwo = 'rgba(255, 0, 0, 0.6)';
+      colorThree = 'rgba(0, 200, 200, 0.6)';
+      colorFour = 'rgba(200, 200, 0, 0.6)';
       break;
     case '2':
-      colorOne = 'rgba(100, 100, 100, 0.5)';
-      colorTwo = 'rgba(100, 100, 100, 0.5)';
-      colorThree = 'rgba(0, 200, 200, 0.5)';
-      colorFour = 'rgba(200, 200, 0, 0.5)';
+      colorOne = 'rgba(255, 0, 150, 0.5)';
+      colorTwo = 'rgba(255, 150, 0, 0.5)';
+      colorThree = 'rgba(255, 75, 75, 0.5)';
+      colorFour = 'rgba(255, 0, 0, 0.5)';
+      break;
+    case '3':
+      colorOne = 'rgba(150, 255, 0, 0.5)';
+      colorTwo = 'rgba(0, 255, 150, 0.5)';
+      colorThree = 'rgba(75, 255, 75, 0.5)';
+      colorFour = 'rgba(0, 255, 0, 0.5)';
       break;
   }
 

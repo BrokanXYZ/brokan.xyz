@@ -16,8 +16,8 @@ const captionStyle = {
     textAlign: 'center'
 }
 
-const NetworkVis = () => (
-  <Layout gradientType='2'>
+const ArSandvbox = () => (
+  <Layout gradientType='3'>
     <Jumbotron style={containerStyle}>
         <div className='col-sm-10 mx-auto'>
 
@@ -76,4 +76,4 @@ const NetworkVis = () => (
   </Layout>
 );
 
-export default NetworkVis;
+export default ArSandvbox;

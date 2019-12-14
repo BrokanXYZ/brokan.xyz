@@ -22,10 +22,22 @@ const titleStyle = {
 
 const ProjectCard = props => (
     <Col xs={3}>
-        <Card style={cardStyle}>
-            <Card.Title style={titleStyle}>{props.title}</Card.Title>
-            <Card.Img style={imgStyle} src={props.imgSrc} />
-        </Card>
+
+        <Link  href={'/' + props.pageLink}>
+            <span>
+                <Card className='coolLink' style={cardStyle}>
+                    <Card.Title style={titleStyle}>{props.title}</Card.Title>
+                    <Card.Img style={imgStyle} src={props.imgSrc} />
+                </Card>
+            </span>
+        </Link>
+
+        <style jsx>{`
+            span {
+                cursor: pointer
+            }
+        `}</style>
+
     </Col>
 );
 

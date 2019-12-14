@@ -21,6 +21,13 @@ export default function Layout(props) {
       colorTwo = 'rgba(255, 0, 0, 0.5)';
       colorThree = 'rgba(0, 200, 200, 0.5)';
       colorFour = 'rgba(200, 200, 0, 0.5)';
+      break;
+    case '2':
+      colorOne = 'rgba(100, 100, 100, 0.5)';
+      colorTwo = 'rgba(100, 100, 100, 0.5)';
+      colorThree = 'rgba(0, 200, 200, 0.5)';
+      colorFour = 'rgba(200, 200, 0, 0.5)';
+      break;
   }
 
   backgroundStyle.background = 'radial-gradient(farthest-side at top left,' + colorOne + ', transparent),radial-gradient(farthest-side at top right,' + colorTwo + ', transparent),radial-gradient(farthest-side at bottom left,' + colorThree + ', transparent),radial-gradient(farthest-side at bottom right,' + colorFour + ', transparent)'; 

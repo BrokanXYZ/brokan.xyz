@@ -19,9 +19,22 @@ const socialIconStyle = {
 
 const Header = () => (
   <Row>
-    <Col xs={3}>Brokan.xyz</Col>
-    <Col xs={5}></Col>
-    <Col xs={4} style={socialColStyle}><SocialIcon style={socialIconStyle} bgColor="#24292E" fgColor="#FFFFFF" url="https://github.com/BrokanXYZ" target="_blank" /><SocialIcon style={socialIconStyle} bgColor="#0077B5" fgColor="#FFFFFF" url="https://www.linkedin.com/in/brokanstafford/" target="_blank" /></Col>
+    
+    <Col xs={8}>
+      <Link href="/"><span><h1>Brokan.xyz</h1></span></Link>
+    </Col>
+
+    <Col xs={4} style={socialColStyle}>
+      <SocialIcon style={socialIconStyle} bgColor="#24292E" fgColor="#FFFFFF" url="https://github.com/BrokanXYZ" target="_blank" />
+      <SocialIcon style={socialIconStyle} bgColor="#0077B5" fgColor="#FFFFFF" url="https://www.linkedin.com/in/brokanstafford/" target="_blank" />
+    </Col>
+  
+    <style jsx>{`
+        span {
+            cursor: pointer
+        }
+    `}</style>
+  
   </Row>
 );
 

@@ -3,9 +3,10 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
 const cardStyle = {
-    width: '15rem',
+    maxWidth: '15rem',
     backgroundColor: 'rgba(0, 0, 0, 0.65)',
     color: 'white',
+    marginBottom: '50px'
 };
 
 const imgStyle = {
@@ -20,25 +21,38 @@ const titleStyle = {
     height: '55px',
 };
 
-const ProjectCard = props => (
-    <Col xs={3}>
+export default function ProjectCard(props) {
 
-        <Link  href={'/' + props.pageLink}>
-            <span>
-                <Card className='coolLink' style={cardStyle}>
-                    <Card.Title style={titleStyle}>{props.title}</Card.Title>
-                    <Card.Img style={imgStyle} src={props.imgSrc} />
-                </Card>
-            </span>
-        </Link>
+    const yearColors = [
+        'aquamarine',
+        'coral',
+        'chartreuse',
+        'gold',
+        'firebrick',
+        'cornflowerblue'
+    ];
 
-        <style jsx>{`
-            span {
-                cursor: pointer
-            }
-        `}</style>
+    const subtitleStyle = {
+        paddingLeft: 10,
+        paddingTop: 10,
+        fontStyle: 'italic',
+        color: yearColors[props.year%yearColors.length]
+    };
 
-    </Col>
-);
-
-export default ProjectCard;
+    return (
+            <Link  href={'/' + props.pageLink}>
+                <span>
+                    <Card className='coolLink' style={cardStyle}>
+                        <Card.Subtitle style={subtitleStyle}>{props.year}</Card.Subtitle>
+                        <Card.Title style={titleStyle}>{props.title}</Card.Title>
+                        <Card.Img style={imgStyle} src={props.imgSrc} />
+                    </Card>
+                    <style jsx>{`
+                    span {
+                        cursor: pointer
+                    }
+                `}</style>
+                </span>
+            </Link>
+    );
+}

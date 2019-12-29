@@ -1,10 +1,12 @@
-import Layout from '../components/HomeLayout';
+import Layout from '../components/Layout';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
-import Figure from 'react-bootstrap/Figure';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
-const containerStyle = {
+
+const jumbotronStyle = {
     backgroundColor: 'rgb(255,255,255,0.9)',
 }
 
@@ -17,59 +19,35 @@ const captionStyle = {
 }
 
 const ArSandvbox = () => (
-  <Layout gradientType='3'>
-    <Jumbotron style={containerStyle}>
+  <Layout gradientType='random'>
+    <Jumbotron style={jumbotronStyle}>
         <div className='col-sm-10 mx-auto'>
 
 
             <div style={bottomPaddingDivStyle}>
-                <h2>Visualizing Network Traffic in 3D</h2>
-                <p>I spent my final year of undergraduate study (2017-18) working on this project as my honors thesis. I attended the 2018 SEC Cyber Security conference in Auburn, Alabama where I presented my work to academic, industry, and government security professionals. 
-                    I completed my thesis by defending my work in front of a committee of professors and several members from the University of Arkansas's network security team.
-                    This project resulted in the creation of a web application that takes in flow data (sFlow, NetFlow, etc.) and outputs interactive 3D visualizations.
-                </p>
-                <Button variant="outline-dark" href='http://scholarworks.uark.edu/cgi/viewcontent.cgi?article=1049&context=csceuht' target='_blank'>Final Paper</Button>
+                <h2>Augmented Reality Sandbox Video Game</h2>
+                <p>I began working on this project during the summer of 2017. I spent a year on and off learning how to build a web-based 3D video game using <a href='https://www.babylonjs.com/' target='_blank'>BabylonJS</a> and <a href='https://www.blender.org/' target='_blank'>Blender</a>. After graduating in the spring of 2018 I spent the next 6 months building an Augmented Reality sandbox and the system that would allow it to interface with the game I had created. The final result of my work is essentially a proof of concept. The game is simplistic and turning it into something fully fledge would require time and a team.</p>
+                <Row className="">
+                    <Col>
+                        <Button variant="outline-dark" href='https://www.linkedin.com/pulse/ar-sandbox-game-untitled-brok-stafford/' target='_blank'>Linked-in Article</Button>
+                    </Col>
+                    <Col>
+                        <Button variant="outline-dark" href='https://github.com/BrokanXYZ/UntitledGame' target='_blank'>Github Repo</Button>
+                    </Col>
+                </Row>
             </div>
 
             <div style={bottomPaddingDivStyle}>
                 <div className="embed-responsive embed-responsive-16by9">
-                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/dBGhoMTLDuk" allowFullScreen></iframe>
+                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/XsTA7HTHhCU" allowFullScreen></iframe>
                 </div>
             </div>
 
             <div style={bottomPaddingDivStyle}>
-                <h5>Abstract</h5>
-                <p>Monitoring network traffic has always been an arduous and tedious
-                    task because of the complexity and sheer volume of network data
-                    that is being consistently generated. In addition, network growth
-                    and new technologies are rapidly increasing these levels of
-                    complexity and volume. An effective technique in understanding
-                    and managing a large dataset, such as network traffic, is data
-                    visualization. There are several tools that attempt to turn network
-                    traffic into visual stimuli. Many of these do so in 2D space and
-                    those that are 3D lack the ability to display network patterns
-                    effectively. Existing 3D network visualization tools lack user
-                    interaction, dynamic generation, and intuitiveness. This project
-                    proposes a user-friendly 3D network visualization application that
-                    creates both dynamic and interactive visuals. This application was
-                    built using the Bablyon.js graphics framework and uses
-                    anonymized data collected from a campus network.
-                </p>
-            </div>
-
-            <Figure>
-                <div className='col-sm-9 mx-auto'>
-                    <Figure.Image
-                    width={1500}
-                    height={1125}
-
-                        src="/media/networkvis/SEC.jpg"
-                    />
+                <div className="embed-responsive embed-responsive-16by9">
+                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/FHelUjj2cQg" allowFullScreen></iframe>
                 </div>
-                <Figure.Caption style={captionStyle}>
-                    Me and my mentor, Professor Dale Thompson, at the University of Auburn for the 2018 SEC Cyber Security Conference.
-                </Figure.Caption>
-            </Figure>
+            </div>
 
         </div>
     </Jumbotron>

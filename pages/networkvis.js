@@ -1,10 +1,10 @@
-import Layout from '../components/HomeLayout';
+import Layout from '../components/Layout';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 import Figure from 'react-bootstrap/Figure';
 
 
-const containerStyle = {
+const jumbotronStyle = {
     backgroundColor: 'rgb(255,255,255,0.9)',
 }
 
@@ -17,8 +17,8 @@ const captionStyle = {
 }
 
 const NetworkVis = () => (
-  <Layout gradientType='2'>
-    <Jumbotron style={containerStyle}>
+  <Layout gradientType='random'>
+    <Jumbotron style={jumbotronStyle}>
         <div className='col-sm-10 mx-auto'>
 
 

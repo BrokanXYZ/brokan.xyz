@@ -2,12 +2,7 @@ import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
-const cardStyle = {
-    maxWidth: '15rem',
-    backgroundColor: 'rgba(0, 0, 0, 0.65)',
-    color: 'white',
-    marginBottom: '50px'
-};
+
 
 const imgStyle = {
     paddingLeft: 12,
@@ -38,6 +33,16 @@ export default function ProjectCard(props) {
         fontStyle: 'italic',
         color: yearColors[props.year%yearColors.length]
     };
+
+    let cardStyle = {
+        backgroundColor: 'rgba(0, 0, 0, 0.65)',
+        color: 'white',
+        marginBottom: '50px'
+    };
+
+    if(!props.isMobile){
+        cardStyle.maxWidth = '15rem';
+    }
 
     return (
             <Link  href={'/' + props.pageLink}>

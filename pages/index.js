@@ -20,15 +20,10 @@ const projectsByYearList = {
     }
   ],
   '2019': [
-    {
-      title: 'Brokan.xyz Site',
-      imgSrc: '/media/index/constructionCard.png',
-      pageLink: 'brokanxyz',
-      inProgress: false
-    },
+    
     {
       title: 'Mannequin Art Project',
-      imgSrc: '/media/index/constructionCard.png',
+      imgSrc: '/media/index/mannequinCard.png',
       pageLink: 'mannequin',
       inProgress: false
     }
@@ -37,7 +32,13 @@ const projectsByYearList = {
     {
       title: 'Bork - Angband Bot',
       imgSrc: '/media/index/constructionCard.png',
-      pageLink: 'bork',
+      pageLink: '',
+      inProgress: true
+    },
+    {
+      title: 'Brokan.xyz Site',
+      imgSrc: '/media/index/constructionCard.png',
+      pageLink: '',
       inProgress: true
     },
   ],
@@ -67,6 +68,7 @@ class IndexPage extends React.Component{
                 pageLink={project.pageLink}
                 title={project.title}
                 imgSrc={project.imgSrc}
+                inProgress={project.inProgress}
                 year={key}
                 isMobile={ua.isMobile}
               />

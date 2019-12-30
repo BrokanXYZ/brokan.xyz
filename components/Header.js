@@ -17,25 +17,35 @@ const socialIconStyle = {
   marginLeft: 10
 }
 
-const Header = () => (
-  <Row>
+export default function Header(props) {
+
+  let pageTitleStyle = {};
+  let dividerStyle = {};
+
+  if(props.isHomePage){
+    pageTitleStyle.color='white';
+    dividerStyle.backgroundColor='white';
+  }
+
+  return(
+    <>
+      <Row>
+      <Col xs={6}>
+        <Link href="/"><span><h1 style={pageTitleStyle}>Brokan.xyz</h1></span></Link>
+      </Col>
+
+      <Col xs={6} style={socialColStyle}>
+        <SocialIcon style={socialIconStyle} bgColor="#24292E" fgColor="#FFFFFF" url="https://github.com/BrokanXYZ" target="_blank" />
+        <SocialIcon style={socialIconStyle} bgColor="#0077B5" fgColor="#FFFFFF" url="https://www.linkedin.com/in/brokanstafford/" target="_blank" />
+      </Col>
     
-    <Col xs={6}>
-      <Link href="/"><span><h1>Brokan.xyz</h1></span></Link>
-    </Col>
-
-    <Col xs={6} style={socialColStyle}>
-      <SocialIcon style={socialIconStyle} bgColor="#24292E" fgColor="#FFFFFF" url="https://github.com/BrokanXYZ" target="_blank" />
-      <SocialIcon style={socialIconStyle} bgColor="#0077B5" fgColor="#FFFFFF" url="https://www.linkedin.com/in/brokanstafford/" target="_blank" />
-    </Col>
-  
-    <style jsx>{`
-        span {
-            cursor: pointer
-        }
-    `}</style>
-  
-  </Row>
-);
-
-export default Header;
+      <style jsx>{`
+          span {
+              cursor: pointer
+          }
+      `}</style>
+    </Row>
+    <hr style={dividerStyle}/>
+  </>
+  );
+}

@@ -29,10 +29,12 @@ export default function ProjectCard(props) {
 
     const subtitleStyle = {
         paddingLeft: 10,
-        paddingTop: 10,
-        fontStyle: 'italic',
-        color: yearColors[props.year%yearColors.length]
+        paddingTop: 10
     };
+
+    const yearColorStyle = {
+        color: yearColors[props.year%yearColors.length]
+    }
 
     let cardStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0.65)',
@@ -44,20 +46,41 @@ export default function ProjectCard(props) {
         cardStyle.maxWidth = '15rem';
     }
 
+    const pageLink = props.pageLink;
+
     return (
-            <Link  href={'/' + props.pageLink}>
+            <>
+            {pageLink=='' ? 
                 <span>
                     <Card className='coolLink' style={cardStyle}>
-                        <Card.Subtitle style={subtitleStyle}>{props.year}</Card.Subtitle>
+                        <Card.Subtitle style={subtitleStyle}>
+                            <i style={yearColorStyle}>{props.year} </i> 
+                            {props.inProgress && <font>- <u>In Progress</u></font>}
+                        </Card.Subtitle>
                         <Card.Title style={titleStyle}>{props.title}</Card.Title>
                         <Card.Img style={imgStyle} src={props.imgSrc} />
                     </Card>
-                    <style jsx>{`
-                    span {
-                        cursor: pointer
-                    }
-                `}</style>
                 </span>
-            </Link>
+            :
+                <Link  href={'/' + props.pageLink}>
+                    <span>
+                        <Card className='coolLink' style={cardStyle}>
+                            <Card.Subtitle style={subtitleStyle}>
+                                <i style={yearColorStyle}>{props.year} </i> 
+                                {props.inProgress && <font>- <u>In Progress</u></font>}
+                            </Card.Subtitle>
+                            <Card.Title style={titleStyle}>{props.title}</Card.Title>
+                            <Card.Img style={imgStyle} src={props.imgSrc} />
+                        </Card>
+                        <style jsx>{`
+                        span {
+                            cursor: pointer
+                        }
+                    `}</style>
+                    </span>
+                </Link>
+            }
+            </>
+            
     );
 }

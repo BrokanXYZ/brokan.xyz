@@ -27,10 +27,10 @@ export default function Layout(props) {
   switch(props.gradientType){
     case 'home':
       colorSet = { 
-        colorOne: 'rgba(0, 0, 255, 0.6)',
-        colorTwo: 'rgba(255, 0, 0, 0.6)',
-        colorThree: 'rgba(0, 200, 200, 0.6)',
-        colorFour: 'rgba(200, 200, 0, 0.6)'
+        colorOne: 'rgba(0, 0, 255, 0.9)',
+        colorTwo: 'rgba(255, 0, 0, 0.9)',
+        colorThree: 'rgba(0, 200, 200, 0.9)',
+        colorFour: 'rgba(200, 200, 0, 0.9)'
       };
       break;
 
@@ -93,8 +93,9 @@ export default function Layout(props) {
             crossorigin="anonymous"
           />
         </Head>
-        <Header/>
-        <hr/>
+        <Header 
+          isHomePage={props.gradientType=='home'}
+        />
         {props.children}
       </Container>
       <div style={footerStyle}></div>

@@ -67,7 +67,7 @@ export default function AboutSection(props) {
             </Col>
             <Col xs={7} md={8} lg={9}>
                 <div className='speech-bubble'>
-                    <p>Howdy! The name's Brok. I'm a tea sippin', insect lovin', tech cravin' individual. Below are personal projects  some of the past projects I've worked on and the projects I'm currently working on! Most of these projects are computer science related. Click on a card to learn more!</p>
+                    <p>Howdy! The name's Brok. I'm a tea sippin', insect lovin', tech cravin' individual. Below are some of the past projects I've worked on and the projects I'm currently working on! Most are computer science related. Click on a card to learn more!</p>
                 </div>
             </Col>
 

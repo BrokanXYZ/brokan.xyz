@@ -85,7 +85,8 @@ export default function Layout(props) {
     <div style={backgroundStyle}>
       <Container style={layoutStyle}>
         <Head>
-          <title></title>
+          <title>Brokan.xyz</title>
+          <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
           <link
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

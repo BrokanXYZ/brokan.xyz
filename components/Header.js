@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import {Row, Col, Button} from 'react-bootstrap';
 import { SocialIcon } from 'react-social-icons';
 
 const linkStyle = {
@@ -35,6 +34,9 @@ export default function Header(props) {
       </Col>
 
       <Col xs={6} style={socialColStyle}>
+        <Button variant="success" size="lg" href="BrokStafford-Resume.pdf" target="_blank">
+          Resume!
+        </Button>
         <SocialIcon style={socialIconStyle} bgColor="#24292E" fgColor="#FFFFFF" url="https://github.com/BrokanXYZ" target="_blank" />
         <SocialIcon style={socialIconStyle} bgColor="#0077B5" fgColor="#FFFFFF" url="https://www.linkedin.com/in/brokanstafford/" target="_blank" />
       </Col>
